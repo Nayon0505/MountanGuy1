@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".personalisierung">
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Personalisierung"
+        android:textSize="38sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="281dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="@color/Gray"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/alterinput"
+        android:layout_width="319dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Alter"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+    <EditText
+        android:id="@+id/größeinput"
+        android:layout_width="319dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Größe in cm"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alterinput" />
+
+    <EditText
+        android:id="@+id/gewichtinput"
+        android:layout_width="319dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Gewicht in kg"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/größeinput" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="175dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="116dp"
+        android:onClick="launchANiveau"
+        android:text="Weiter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gewichtinput" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

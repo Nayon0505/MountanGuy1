@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hell2Gray"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personalisierung"
+            android:textSize="26sp"
+            android:layout_gravity="center" />
+
+        <!-- Füge weiteren Inhalt hinzu, der gescrollt werden kann -->
+
+
+        <TextView
+            android:id="@+id/profilUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="Benutzername:"
+            android:textSize="22dp"
+            android:textAlignment="center"
+            />
+
+        <!-- Füge hier den Spinner ein -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wählen Sie Ihr Geschlecht aus:"
+                android:layout_marginEnd="16dp" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="@color/Gray"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <!-- Weitere Views hier hinzufügen -->
+
+        <EditText
+            android:id="@+id/alterinput"
+            android:layout_width="319dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Alter"
+            android:inputType="number"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/größeinput"
+            android:layout_width="319dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Größe in cm"
+            android:inputType="number"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/gewichtinput"
+            android:layout_width="319dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Gewicht in kg"
+            android:inputType="numberDecimal"
+            android:layout_gravity="center" />
+
+        <!-- Neues horizontales LinearLayout für Text und Spinner -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wählen Sie Ihr Aktivitätsniveau:"
+                android:layout_marginEnd="16dp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="@color/Gray"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wählen Sie Ihr Ziel aus:"
+                android:layout_marginEnd="16dp" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="@color/Gray"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Täglicher Protein verbrauch:"
+                android:layout_marginEnd="16dp" />
+
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_width="0dp"
+                android:layout_height="62dp"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="@color/Gray"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/aktualisierenbutton"
+            android:layout_width="175dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:onClick="applyChange"
+            android:text="Aktualisieren" />
+        <!-- Füge so viele Views hinzu, wie nötig, um das Scrollen zu ermöglichen -->
+
+        <TextView
+            android:id="@+id/grundumsatzTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grundumsatz: "
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/kalorienbedarfTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalorienbedarf bei Aktivität: "
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/zielKalorienbedarfTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kalorienbedarf fürs Ziel: "
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/proteinbedarfTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proteinbedarf: "
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/kohlenhydratebedarfTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kohlenhydratebedarf: "
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/fettbedarfTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fettbedarf: "
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"  />
+    <item
+        android:id="@+id/profil"
+        android:title="Profil"
+        android:icon="@drawable/baseline_account_box_24" />
+  <!--  <item
+        android:id="@+id/statistik"
+        android:title="Statistik"
+        android:icon="@drawable/baseline_analytics_24" />    das ist für die zukunft gedacht in der man die App fortführt -->
+</menu>

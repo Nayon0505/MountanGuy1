@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1) Größenordnung: 1 = 100g; 2.5 = 250g; etc."
+        android:textSize="17sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2) Verwenden Sie für Dezimalzahlen einen Punkt"
+        android:textSize="17sp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+
+    <EditText
+        android:id="@+id/amount_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Menge in Gramm"
+        android:layout_marginBottom="16dp"/>
+</LinearLayout>
